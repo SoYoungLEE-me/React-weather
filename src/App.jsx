@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { getCurrentWeather } from "./api/weather";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import WeatherBox from "./components/WeatherBox";
+import WeatherButton from "./components/WeatherButton";
 
 //1. 앱이 실행되자 마자 현재 위치 기반의 날씨를 보여준다.=> useEffect
 function App() {
+  const [weather, setWeather] = useState(null);
+
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition(
       async (position) => {
@@ -12,7 +17,7 @@ function App() {
 
         try {
           const data = await getCurrentWeather(lat, lon);
-          console.log(data);
+          setWeather(data);
         } catch (error) {
           console.error(error.message); //API 호출 실패 시 에러 처리
         }
@@ -25,7 +30,14 @@ function App() {
   useEffect(() => {
     getCurrentLocation();
   }, []);
-  return <></>;
+  return (
+    <>
+      <div className="container">
+        <WeatherBox weather={weather} />
+        <WeatherButton />
+      </div>
+    </>
+  );
 }
 
 export default App;
