@@ -19,7 +19,8 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 28px;
-  max-width: 320px;
+  width: 320px;
+  height: 370px;
   text-align: center;
   color: #fff;
   font-family: "Pretendard", sans-serif;
@@ -94,39 +95,10 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/*WeeklyForecast 컴포넌트 스타일*/
-.weekly-box {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 20px;
-  color: white;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-
-.weekly-box h3 {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.weekly-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.day-box {
-  flex: 1 1 120px;
-  min-width: 100px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 12px;
-  text-align: center;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.location-btn.active {
+  background-color: #6ce9ff !important;
+  font-weight: bolder;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .loader-wrapper {
