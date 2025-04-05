@@ -128,3 +128,10 @@ body {
   font-size: 0.95rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* 화면 중간 정렬용 */
+}
